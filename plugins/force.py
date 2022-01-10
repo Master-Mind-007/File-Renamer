@@ -44,14 +44,34 @@ async def text(bot, update):
             await update.reply_text(
                 text="**📲 Please Join My Update Channel Before Using Me 📲**",
                 reply_markup=InlineKeyboardMarkup([
+
                     [ InlineKeyboardButton(text="↗️ Join My Updates Channel ↗️", url=f"https://t.me/{update_channel}")]
+
               ])
+
             )
+
             return
+
         else:
+
             await update.reply_text(Translation.START_TEXT.format(update.from_user.first_name),
+
         reply_markup=InlineKeyboardMarkup(
+
+            [
+
+                [
+
+                    InlineKeyboardButton('Owned And Maintained By', url='https://t.me/MasterMind_Mikhil'),
+                   
+                ]
+
+            ]
+
         ),
+
         reply_to_message_id=update.message_id
+
     )
             return 
